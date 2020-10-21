@@ -11,9 +11,10 @@ body {
 
 
 
-/* #wrapper > section {
+#wrapper > section {
   display:flex;
-} */
+  justify-content: center;
+} 
 
 h1 {
   margin:0px;
@@ -24,24 +25,30 @@ h1 {
 section#part-blue {
   background-color:rgba(0, 162, 255,1);
   
+  
 }
 
 #part-blue #center-box {
   width:100px;
   height:100px;
   background-color: royalblue;
+  align-self: center;
+  justify-content: center;
   }
 
 /*2. Sprid ut länkarna jämnt horisontellt*/
 
 section#part-orange {
   background-color:rgba(250, 182, 71, 1);
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* 3. Stapla boxarna vertikalt */
 section#part-pink {
   background-color: pink;
-  display:flex
+  display:flex;
+  flex-direction: column;
 }
 
 section#part-pink .column-box {
@@ -49,6 +56,7 @@ section#part-pink .column-box {
   width:100px;
   background-color: hotpink;
   margin:5px;
+  
 }
 
 /* 4. Få boxarna att "wrappas" (flera rader) */
@@ -56,6 +64,7 @@ section#part-pink .column-box {
 section#part-green {
   background-color: rgba(150, 255, 118,1);
   display:flex;
+  flex-wrap: wrap;
   
 }
 
@@ -73,31 +82,36 @@ section#part-brown {
   display:flex;
   align-items:center;
   justify-content:center;  
+  
 }
 
 section#part-brown article {
   height:100px;
   width:100px;
+ 
 }
 
 #part-brown article:nth-child(1) {
   background-color:lightblue;
-  
+  order: 5 ;
 }
 #part-brown article:nth-child(2) {
   background-color:lightgreen;
-  
+  order: 4 ;
 }
 #part-brown article:nth-child(3) {
   background-color:yellow;
+  order: 3 ;
   
 }
 #part-brown article:nth-child(4) {
   background-color:orange;
+  order: 2 ;
   
 }
 #part-brown article:nth-child(5) {
   background-color:red;
+  order: 1 ;
   
 }
 
@@ -115,6 +129,7 @@ section#part-grey div {
   overflow: hidden;
 }
 section#part-grey div#double-trouble {
+  flex-basis: 200%;
   
 }
 
